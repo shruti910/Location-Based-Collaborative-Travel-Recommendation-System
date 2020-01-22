@@ -1,0 +1,201 @@
+{% extends "home/header.html" %}
+{%load static %}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+{% block content%}
+<div class=  "main11" >
+     <div class="row">
+         <div class="col-md-6">
+          <h1 class="page-header">Nearby Tourist Attractions</span></h1>
+         </div>
+
+     </div>
+{% for c in place_near %}
+
+           <div class=" panel panel-info">
+
+                <div class="panel-heading">
+                    <h2 class="panel-title text-uppercase "><b>{{c.place}}</b></h2>
+            </div>
+                <div class="panel-body">
+<div class="col-md-8">
+                <img src="{% static c.image_url %}" class="img-responsive" alt="thumbnail" style="height:500px; width:90%;">
+</div>
+                    <div class="col-md-4 jq">
+                        <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                        </div>
+                         <div class="fstar text-muted">{{c.stars|floatformat}}</div>
+Address:<h4 class="text-muted desc">{{c.address}}</h4>
+                  <h5 class="text-muted desc">{{c.description}}</h5>
+                        <form method="post" action="{% url 'mapdisplay' %}">
+  {% csrf_token %}
+                            <div class="form-group">
+     <input type="text" value="{{c.address}}" id="vat1" name="name" class="form-control" style="display:none;" />
+                            </div>
+                        <button type="submit" class="btn btn-sm btn-info" name="b1">Show on Map</button>
+                            <button type="submit" class="btn btn-sm btn-info" name="b2">Calculate Distance</button>
+                            <button type="submit" class="btn btn-sm btn-info" name="b3">Get Directions</button>
+
+                        </form>
+<div style="margin-top:20px;">
+                         <form method="post" action="{% url 'ratingsubmit' %}">
+  {% csrf_token %}
+                            <div class="form-group">
+     <input type="text" value="{{c.pid}}" name="name1" class="form-control" style="display:none;" />
+                 <input type="text" value="{{c.place}}"  name="name2" class="form-control" style="display:none;" />
+                  <input type="text" name="name3" class="form-control" placeholder="your rating"/>
+                            </div>
+                        <button type="submit" class="btn btn-sm btn-info" name="b7">Submit your rating</button>
+
+                        </form>
+</div>
+                    </div>
+
+                </div>
+
+          </div>
+
+{% endfor %}
+ </div>
+
+<div class=  "main11" >
+     <div class="row">
+         <div class="col-md-6">
+          <h1 class="page-header">Nearby Restaurants:</h1>
+         </div>
+     </div>
+
+{% for q in rest_near%}
+    <div class=" panel panel-info">
+        <div class="panel-heading">
+                    <h2 class="panel-title text-uppercase "><b>{{q.name}}</b></h2>
+        </div>
+        <div class="panel-body row">
+     <div class="col-md-6"> <div class="jq">
+    <div class="stars-outer">
+        <div class="stars-inner"></div>
+    </div>
+    <div class="fstar text-muted">{{q.stars|floatformat}}</div>
+
+</div>
+         <p>Reviewed by:&nbsp; {{q.review_count}}&nbsp; people</p>
+         <p>  Address:{{q.address}} </p>
+           <p>City: {{q.city}}</p>
+         <p>State: {{q.state}}</p>
+         <p>Postal code:{{q.postal_code}}</p>
+          <form method="post" action="{% url 'mapdisplay' %}">
+  {% csrf_token %}
+          <div class="form-group">
+  <input type="text" value="{{q.latitude}}"  name="name1" class="form-control" style="display:none;" />
+    <input type="text" value="{{q.longitude}}"  name="name2" class="form-control" style="display:none;" />
+        <input type="text" value="{{q.address}}" name="name3" class="form-control"  style="display:none;"/>
+                            </div>
+        </div>
+            <div class="col-md-6">
+ <button type="submit" class="btn btn-sm btn-info" name="b4">Show on Map</button>
+                            <button type="submit" class="btn btn-sm btn-info" name="b5">Calculate Distance</button>
+                            <button type="submit" class="btn btn-sm btn-info" name="b6">Get Directions</button>
+
+                        </form>
+                 <div style="margin-top:20px;">
+                            <form method="post" action="{% url 'ratingsubmit' %}">
+  {% csrf_token %}
+                            <div class="form-group">
+     <input type="text" value="{{q.business_id}}"  name="name1" class="form-control" style="display:none;" />
+                 <input type="text" value="{{q.name}}"  name="name2" class="form-control" style="display:none;" />
+                  <input type="text" name="name3" class="form-control" placeholder="your rating (1 to 5)" onkeyup="checkrating();"/>
+                            </div>
+                        <button type="submit" class="btn btn-sm btn-info" name="b9">Submit your rating</button>
+
+                        </form>
+                        </div>
+        </div>   </div></div>
+
+
+
+    {% endfor %}
+
+     </div>
+<div class=  "main11" >
+     <div class="row">
+         <div class="col-md-6">
+          <h1 class="page-header">Nearby Hotels:</h1>
+         </div>
+     </div>
+
+{% for q in hotel_near%}
+    <div class=" panel panel-info">
+        <div class="panel-heading">
+                    <h2 class="panel-title text-uppercase "><b>{{q.name}}</b></h2>
+        </div>
+        <div class="panel-body row">
+     <div class="col-md-6"> <div class="jq">
+    <div class="stars-outer">
+        <div class="stars-inner"></div>
+    </div>
+    <div class="fstar text-muted">{{q.stars|floatformat}}</div>
+
+</div>
+         <p>Reviewed by:&nbsp; {{q.review_count}}&nbsp; people</p>
+         <p>  Address:{{q.address}} </p>
+           <p>City: {{q.city}}</p>
+         <p>State: {{q.state}}</p>
+         <p>Postal code:{{q.postal_code}}</p>
+          <form method="post" action="{% url 'mapdisplay' %}">
+  {% csrf_token %}
+          <div class="form-group">
+  <input type="text" value="{{q.latitude}}"  name="name1" class="form-control" style="display:none;" />
+    <input type="text" value="{{q.longitude}}"  name="name2" class="form-control" style="display:none;" />
+        <input type="text" value="{{q.address}}" name="name3" class="form-control"  style="display:none;"/>
+                            </div>
+        </div>
+            <div class="col-md-6">
+ <button type="submit" class="btn btn-sm btn-info" name="b4">Show on Map</button>
+                            <button type="submit" class="btn btn-sm btn-info" name="b5">Calculate Distance</button>
+                            <button type="submit" class="btn btn-sm btn-info" name="b6">Get Directions</button>
+
+                        </form>
+                 <div style="margin-top:20px;">
+                            <form method="post" action="{% url 'ratingsubmit' %}">
+  {% csrf_token %}
+                            <div class="form-group">
+     <input type="text" value="{{q.business_id}}" id="vat2" name="name1" class="form-control" style="display:none;" />
+                 <input type="text" value="{{q.name}}" id="vat3" name="name2" class="form-control" style="display:none;" />
+                  <input type="text" id="vat4" name="name3" class="form-control" placeholder="your rating (1 to 5)" onkeyup="checkrating();"/>
+                            </div>
+                        <button type="submit" class="btn btn-sm btn-info" name="b8">Submit your rating</button>
+
+                        </form>
+                        </div>
+        </div>   </div></div>
+
+
+
+    {% endfor %}
+
+     </div>
+<script>
+
+
+	$(window).load(function () {
+
+$( ".jq" ).each(function() {
+    const starTotal = 5;
+    var number = parseFloat($(this).find('.fstar').text(),10);
+     const starPercentage = (number / starTotal);
+     const starPercentageRounded = `${starPercentage*100}%`;
+$(this).find('.stars-inner').css("width",starPercentageRounded);
+});
+            });
+             function checkrating(){
+            var x=document.getElementById("vat4").value;
+
+            if (isNaN(x) || parseFloat(x) < 1 || parseFloat(x) > 5) {
+       alert("enter number between 1 to 5");
+    }
+
+            }
+</script>
+
+{%endblock%}

@@ -1,0 +1,117 @@
+{% extends "home/header.html" %}
+{%load static %}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+{% block content%}
+{% for c in pdict %}
+
+           <div class=" panel panel-info">
+
+                <div class="panel-heading">
+                    <h2 class="panel-title text-uppercase "><b>{{c.name}}</b></h2>
+            </div>
+                <div class="panel-body">
+<div class="col-md-8">
+                <img src="{% static imgsrc %}" class="img-responsive" alt="thumbnail" style="height:500px; width:90%;">
+</div>
+                    <div class="col-md-4 jq">
+                        <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                        </div>
+                         <div class="fstar text-muted">{{c.stars|floatformat}}</div>
+<h4 class="text-muted desc">Address:{{c.address}}</h4>
+                        <h4 class="text-muted desc">City:{{c.city}}</h4>
+                        <h4 class="text-muted desc">State:{{c.state}}</h4>
+<h4 class="text-muted desc">Postal code:{{c.postal_code}}</h4>
+                        <form method="post" action="{% url 'mapdisplay' %}">
+  {% csrf_token %}
+                            <div class="form-group">
+  <input type="text" value="{{c.latitude}}"  name="name1" class="form-control" style="display:none;" />
+    <input type="text" value="{{c.longitude}}"  name="name2" class="form-control" style="display:none;" />
+      <input type="text" value="{{c.address}}" name="name3" class="form-control"  style="display:none;" />
+                            </div>
+                        <button type="submit" class="btn btn-sm btn-info" name="b4">Show on Map</button>
+                            <button type="submit" class="btn btn-sm btn-info" name="b5">Calculate Distance</button>
+                            <button type="submit" class="btn btn-sm btn-info" name="b6">Get Directions</button>
+
+                        </form>
+                         <div style="margin-top:20px;">
+                            <form method="post" action="{% url 'ratingsubmit' %}">
+  {% csrf_token %}
+                            <div class="form-group">
+     <input type="text" value="{{c.business_id}}" id="vat2" name="name1" class="form-control" style="display:none;" />
+                 <input type="text" value="{{c.name}}" id="vat3" name="name2" class="form-control" style="display:none;" />
+                  <input type="text" id="vat4" name="name3" class="form-control" placeholder="your rating (1 to 5)" onkeyup="checkrating();"/>
+                            </div>
+                        <button type="submit" class="btn btn-sm btn-info" name="b9" >Submit your rating</button>
+
+                        </form>
+                        </div>
+                        <div style=margin-top:20px;">
+                          <form method="post" action="{% url 'nearbyrec' %}">
+  {% csrf_token %}
+                   <div class="form-group">
+     <input type="text" value="{{c.city}}" id="n1" name="name" class="form-control" style="display:none;" />
+           <input type="text" value="{{c.state}}" id="n2" name="name1" class="form-control" style="display:none;" />
+
+                            </div>
+           <button type="submit" class="btn btn-sm btn-success" name="btn1" >Search nearby Destinations /Restaurants /Hotels</button>
+
+                          </form>
+                        </div>
+                    </div>
+
+                </div>
+
+          </div>
+
+{% endfor %}
+<div>
+     <form method="post" action="{% url 'filter' %}">
+  {% csrf_token %}
+    <div><h3><span class="label label-primary">Filter based on Cost</span></h3>&nbsp;
+    <button type="submit" class="btn btn-sm btn-success" name="f1">Below 4000</button>&nbsp;
+      <button type="submit" class="btn btn-sm btn-success" name="f2">Between  4000 to 6000</button>&nbsp;
+       <button type="submit" class="btn btn-sm btn-success" name="f3">Between 6000 to 8000</button>&nbsp;
+        <button type="submit" class="btn btn-sm btn-success" name="f4">Above 8000</button>&nbsp;
+    </div>
+     </form>
+{% include "recommendation/recommendation.html" %}
+</div>
+<div>
+     <form method="post" action="{% url 'filter' %}">
+  {% csrf_token %}
+    <div><h3><span class="label label-primary">Filter based on Cost</span></h3>&nbsp;
+    <button type="submit" class="btn btn-sm btn-success" name="f5">Below 4000</button>&nbsp;
+      <button type="submit" class="btn btn-sm btn-success" name="f6">Between  4000 to 6000</button>&nbsp;
+       <button type="submit" class="btn btn-sm btn-success" name="f7">Between 6000 to 8000</button>&nbsp;
+        <button type="submit" class="btn btn-sm btn-success" name="f8">Above 8000</button>&nbsp;
+    </div>
+     </form>
+   {% include "recommendation/recommendationHotel.html" %}
+</div>
+<script>
+
+
+	$(window).load(function () {
+
+$( ".jq" ).each(function() {
+    const starTotal = 5;
+    var number = parseFloat($(this).find('.fstar').text(),10);
+     const starPercentage = (number / starTotal);
+     const starPercentageRounded = `${starPercentage*100}%`;
+$(this).find('.stars-inner').css("width",starPercentageRounded);
+});
+            });
+
+            function checkrating(){
+            var x=document.getElementById("vat4").value;
+
+            if (isNaN(x) || parseFloat(x) < 1 || parseFloat(x) > 5) {
+       alert("enter number between 1 to 5");
+    }
+
+            }
+</script>
+
+{% endblock %}

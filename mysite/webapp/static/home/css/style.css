@@ -1,0 +1,688 @@
+ @charset "utf-8";
+/* CSS Document */
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+/* close commented backslash hack*/ 
+
+
+/*------GLOBAL------*/
+html {
+	width: 100%;
+	height: 100%;
+}
+* {
+	padding: 0;
+	margin: 0;
+	outline: 0 none;
+}
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	/*font-family: 'Lobster Two', cursive;*/
+	font-weight: 300;
+	color: #6d6e71;
+	line-height: 24px;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+}
+a {
+	color: #507cbe;
+	text-decoration: none;
+}
+.wrapper {
+	position: relative;
+	width: 100%;
+	display: block;
+	clear: both;
+}
+h1, h2, h3, h4, h5 {
+	font-size: 24px;
+	line-height: 125%;
+	color: #000000;
+}
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome-webfont.eot?v=4.4.0');
+	src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+a:hover, a:focus {
+	text-decoration: underline;
+}
+nav {
+	width: 50%;
+	float: left;
+	display: block;
+	margin: 0;
+	z-index: 15;
+}
+header {
+	padding: 25px 0 30px;
+	border-top: 5px solid #5bbd50;
+}
+.contact {
+	font-size: 20px;
+	float: right;
+	font-weight: 400;
+}
+.number a {
+	color: #F00;
+	margin-left: 10px;
+}
+.time {
+	font-size: 15px;
+	color: #727272;
+	margin-left: 10px;
+}
+.saction1 {
+	background-color: #f1f1f1;
+	margin-top: 30px;
+}
+.menu li {
+	float: left;
+	padding: 20px 5px 20px;
+}
+.menu a {
+	text-transform: uppercase;
+	color: #494949;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-right: 15px;
+	border-right: 1px solid #CCCCCC;
+	transition: all 0.3s;
+}
+.menu a:hover {
+	color: #69c15f;
+}
+.menu li:last-child a {
+	border: 0;
+}
+.login {
+	width: 50%;
+	float: right;
+	display: block;
+}
+.login li {
+	float: left;
+}
+.login ul {
+	float: right;
+	padding: 20px 5px 20px;
+}
+.login a {
+	color: #494949;
+	margin-left: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-right: 15px;
+	border-right: 1px solid #CCCCCC;
+	transition: all 0.3s;
+}
+.login li:last-child a {
+	border: 0;
+}
+.login a:hover {
+	color: #69c15f;
+}
+.backgraound {
+	background: url(../images/manhatten1.jpg) no-repeat;
+	background-size: cover;
+	display: block;
+	min-height: 425px;
+	position: relative;
+}
+.back h2 {
+	text-align: center;
+	color: #FFF;
+	font-size: 35px;
+	letter-spacing: 2px;
+	margin-top: 90px;
+}
+.back h3 {
+	text-align: center;
+	color: #FFF;
+	font-size: 35px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-family: 'Lobster Two', cursive;
+}
+.line1 {
+	position: absolute;
+	display: inline-block;
+	height: 4px;
+	width: 35%;
+	background: #554f35;
+	top: 85%;
+	left: 1%;
+}
+.line2 {
+	position: absolute;
+	display: inline-block;
+	height: 4px;
+	width: 35%;
+	background: #554f35;
+	top: 90%;
+	left: 1%;
+}
+.line3 {
+	position: absolute;
+	display: inline-block;
+	height: 4px;
+	width: 35%;
+	background: #554f35;
+	top: 90%;
+	right: 1%;
+}
+.line4 {
+	position: absolute;
+	display: inline-block;
+	height: 4px;
+	width: 35%;
+	top: 85%;
+	right: 1%;
+	background: #554f35;
+}
+.textbox h3 {
+	margin-top: 35px;
+	color: #FFF;
+	font-weight: 400;
+	font-size: 22px;
+}
+.textbox input {
+	border: hidden;
+	font-size: 18px;
+	font-weight: 400;
+	margin-top: 5px;
+	width: 100%;
+	min-height: 41px;
+	border-radius: 4px;
+	padding: 7px 15px;
+}
+.textbox1 h3 {
+	margin-top: 35px;
+	color: #FFF;
+	font-weight: 400;
+	font-size: 22px;
+}
+.textbox1 input {
+	border: hidden;
+	font-size: 18px;
+	font-weight: 400;
+	margin-top: 5px;
+	width: 70%;
+	min-height: 41px;
+	border-radius: 4px;
+	padding: 7px;
+}
+.search {
+	background-color: #5bbd50;
+	margin-left: 20px;
+	padding: 10px 25px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.search a {
+	color: #FFF;
+	font-size: 25px;
+}
+.saction3 {
+	padding: 50px 0 50px;
+	position: relative;
+}
+.ordaring h2 {
+	text-align: center;
+	font-family: 'Lobster Two', cursive;
+	color: #515151;
+	font-size: 35px;
+	font-weight: 700;
+}
+.ordaring p {
+	text-align: center;
+	margin-top: 15px;
+	color: #e24425;
+	font-size: 30px;
+}
+.arrow, .arrow1 {
+	position: absolute;
+	top: 52%;
+	right: -38px;
+}
+.step img {
+	text-align: center;
+	display: block;
+	margin: 50px auto;
+}
+.step1 img {
+	text-align: center;
+	display: block;
+	margin: 50px auto;
+}
+.dotted {
+	border: 1px dashed #000;
+	width: 35%;
+}
+.dotted1 {
+	border: 1px dashed #515151;
+	width: 27%;
+	display: inline-block;
+	top: 90%;
+	position: absolute;
+	right: 12%;
+}
+.dotted {
+	border: 1px dashed #515151;
+	width: 27%;
+	display: inline-block;
+	top: 90%;
+	position: absolute;
+	left: 12%;
+}
+.saction4 {
+	background-color: #f1f1f1;
+	padding: 60px 0 60px;
+}
+.special h2 {
+	text-align: center;
+	font-family: 'Lobster Two', cursive;
+	color: #515151;
+	font-size: 35px;
+	font-weight: 700;
+}
+.dotted3 {
+	border: 1px dashed #515151;
+	width: 27%;
+	display: inline-block;
+	top: 50%;
+	position: absolute;
+	left: 12%;
+}
+.dotted4 {
+	border: 1px dashed #515151;
+	width: 27%;
+	display: inline-block;
+	top: 50%;
+	position: absolute;
+	right: 12%;
+}
+.slider {
+	background-color: #FFF;
+	padding: 15px;
+	border-radius: 5px;
+	margin: 40px 0;
+}
+.img {
+	width: 50%;
+	float: left;
+}
+.title {
+	float: right;
+	width: 50%
+}
+.title h3 {
+	margin: 10px 5px 15px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #5bbd50;
+}
+.title p {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 16px;
+	margin: 0 5px 15px;
+}
+.title a {
+	text-decoration: none;
+	background-color: #e24425;
+	color: #FFF;
+	font-size: 14px;
+	padding: 8px;
+	border-radius: 5px;
+	margin: 0 5px;
+	font-weight: 400;
+}
+.saction5 {
+	padding: 60px 0;
+}
+.dotted6 {
+	border: 1px dashed #515151;
+	width: 30%;
+	display: inline-block;
+	top: 5%;
+	position: absolute;
+	right: 4%;
+}
+.dotted7 {
+	border: 1px dashed #515151;
+	width: 65%;
+	display: inline-block;
+	top: 5%;
+	position: absolute;
+	right: 4%;
+}
+.restaurants h3 {
+	font-family: 'Lobster Two', cursive;
+	color: #515151;
+	font-size: 35px;
+	font-weight: 700;
+}
+.Cuisines h3 {
+	font-family: 'Lobster Two', cursive;
+	color: #515151;
+	font-size: 35px;
+	float: left;
+	font-weight: 700;
+}
+.rest a {
+	display : block;
+	width : 165px;
+	height : 113px;
+}
+.subway a {
+	margin-top: 40px;
+	display : block;
+	width : 170px;
+	height : 113px;
+}
+.kfc a {
+	margin-top: 40px;
+	display : block;
+	width : 170px;
+	height : 113px;
+}
+.papa a {
+	margin-top: 40px;
+	display : block;
+	width : 170px;
+	height : 113px;
+}
+.pizza a {
+	margin-top: 40px;
+	display : block;
+	width : 170px;
+	height : 113px;
+}
+.barti a {
+	margin-top: 40px;
+	display : block;
+	width : 170px;
+	height : 113px;
+}
+.rest {
+	padding-top: 40px;
+}
+.food h3 {
+	font-family: 'Lobster Two', cursive;
+	color: #515151;
+	font-size: 35px;
+	font-weight: 700;
+}
+.order a {
+	text-decoration: none;
+	color: #515151;
+	transition: all 0.3s;
+	font-weight: 700;
+}
+.order a:hover {
+	color: #69c15f;
+}
+.order {
+	background-color: #f1f1f1;
+	width: 170px;
+	margin-top: -8px;
+	padding: 10px;
+	text-align: center;
+	font-weight: 700;
+	border-radius: 0px 0 8px 8px;
+	border: 1px solid #DADADA;
+}
+.food1 {
+	padding: 40px 0 10px;
+}
+.saction6 {
+	border-top: 2px solid #CCC;
+}
+.bg {
+	height: 150%;
+	width: 100%;
+	margin: 50px 0 50px;
+	border-radius: 10px;
+	background-color: brown;
+}
+.images h3 {
+	font-family: 'Lobster Two', cursive;
+	color: #ffcc00;
+	font-size: 30px;
+	padding: 30px 0;
+	font-weight: 100;
+}
+.point {
+	margin: 25px 0;
+}
+.point p {
+	margin: 5px 0;
+}
+.point span {
+	color: #ffcc00;
+}
+.point a {
+	color: #FFFFFF;
+	font-weight: 700;
+	font-size: 18px;
+	margin: 10px 0;
+}
+.imgs img {
+	margin-top: 10px;
+}
+.button {
+	background-color: #0C0;
+	margin: 45px 20px;
+	padding: 10px;
+	border: 2px solid #FFF;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.button a {
+	color: #FFF;
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+	margin: 0 auto;
+	text-decoration: none;
+}
+.saction7 {
+	border-top: 2px solid #CCC;
+	padding: 50px 0 40px;
+}
+.service {
+	width: 40%;
+	float: left;
+}
+.det {
+	width: 60%;
+	float: right;
+}
+.det h3 {
+	font-family: 'Lobster Two', cursive;
+	color: #5bbd50;
+	font-size: 20px;
+	margin: 15px 0 0;
+	font-weight: 700;
+}
+.det p {
+	font-size: 15px;
+	font-weight: 400;
+}
+.saction8 {
+	background-color: #515151;
+	padding: 60px 0 60px;
+}
+.site h3 {
+	color: #FFF;
+	font-size: 20px;
+	font-family: 'Lobster Two', cursive;
+	font-weight: 700;
+}
+.sitelink span {
+	color: #5bbd50;
+}
+.sitelink a {
+	color: #9d9d9d;
+	font-weight: 400;
+	margin-left: 5px;
+}
+.sitelink li {
+	border-bottom: 1px dashed #9d9d9d;
+	padding: 10px 0 10px;
+}
+.sitelink a:last-child a {
+	border: 0;
+}
+.follow h3 {
+	color: #FFF;
+	font-size: 20px;
+	font-family: 'Lobster Two', cursive;
+	font-weight: 700;
+}
+.social a {
+	color: #9d9d9d;
+	font-weight: 400;
+	margin-left: 5px;
+}
+.social i {
+	color: #5bbd50;
+}
+.social li {
+	border-bottom: 1px dashed #9d9d9d;
+	padding: 10px 0 10px;
+}
+.submit h3 {
+	color: #FFF;
+	font-size: 20px;
+	font-family: 'Lobster Two', cursive;
+	font-weight: 700;
+}
+.submit p {
+	color: #9d9d9d;
+	font-weight: 600;
+	margin: 20px 0 20px;
+}
+.submitbox input {
+	width: 100%;
+	height: 40px;
+	display: block;
+	border-radius: 5px;
+	border: 2px solid #9d9d9d;
+	background-color: #515151;
+	color: #FFF;
+	font-weight: 700;
+	font-size: 15px;
+	padding: 6px;
+}
+.sub {
+	background-color: #0C0;
+	padding: 8px;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100px;
+	margin: 10px 0;
+	text-align: center;
+}
+.sub a {
+	color: #FFF;
+	font-weight: 700;
+	font-size: 17px;
+	text-align: center;
+	margin: 0 auto;
+	text-decoration: none;
+}
+.saction9 {
+	background-color: #4d4d4d;
+	padding: 40px 0 40px;
+}
+.email {
+	color: #5bbd50;
+	font-weight: 600;
+}
+/*Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader {
+	display: none;
+}
+.js #loader {
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 0;
+}
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../images/triangle.svg) center no-repeat #000;
+}
+
+.freetemplates { color: #5bbd50;
+	font-weight: 600;
+	}
+
+.freetemplates A { color:#FFF;}	
+	

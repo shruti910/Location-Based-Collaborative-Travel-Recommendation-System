@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trip Recommender</title>
+{% load static %}
+<link href='https://fonts.googleapis.com/css?
+family=Lobster+Two:400,700' rel='stylesheet'
+type='text/css'>
+<link href='https://fonts.googleapis.com/css?
+family=Source+Sans+Pro:400,600,300,700'
+rel='stylesheet' type='text/css' />
+<link rel="icon" href="{% static 'home/images/icon.png' %}">
+
+<!--MOBILE DEVICE-->
+<meta name="viewport" content="width=device-width,
+initial-scale=1, maximum-scale=1"/>
+
+<!--CSS-->
+<link rel="stylesheet" type="text/css"
+href="{% static 'home/css/bootstrap.min.css' %}"/>
+<link rel="stylesheet" type="text/css"
+href="{% static 'home/css/style.css' %}"/>
+<link rel="stylesheet" href="{% static 'personal/css/font-awesome.min.css' %}" type = "text/css"/>
+<link rel="stylesheet" type="text/css"
+href="{% static 'home/css/animate.css' %}">
+<link rel="stylesheet" type="text/css"
+href="{% static 'home/css/responsive.css' %}"/>
+    <link rel="stylesheet" href="{% static 'personal/css/dashboard.css' %}" type = "text/css"/>
+    <link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+<link rel="stylesheet" href="{% static 'personal/css/dashboard.css' %}" type = "text/css"/>
+<link rel="stylesheet" href="{% static 'personal/css/font-awesome.min.css' %}" type = "text/css"/>
+
+<!--JS-->
+
+<script type="text/javascript" src="{% static 'home/js/jquery-1.11.3.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'personal/js/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'personal/js/bootstrap.min.js' %}"></script>
+
+<script type="text/javascript"
+src="{% static 'home/js/modernizr.js' %}"></script>
+<script src="{% static 'home/js/scripts.js' %}"></script>
+<script src="{% static 'home/js/waypoints.min.js' %}"></script>
+</head>
+
+<body>
+<!-- Paste this code after body tag -->
+<div class="se-pre-con"></div>
+<!-- Ends -->
+
+<header>
+  <div class="container">
+    <div class="row clearfix" id="home">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-
+12">
+        <div class="logo">
+          <h1> <a href="{% url 'index' %}"><img src="{% static 'home/images/icon.png' %}" alt="" height="60px" width="60px"/></a> </h1>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-
+12">
+        <div class="contact">
+          <p>Questions? Call us Toll-free!<span
+class="number"><a href="#">1800-0000-
+7777</a></span><span class="time">(11AM to 11PM)
+</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="saction1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="menu">
+          <div class="mobile-nav-container"> </div>
+          <div class="mobile-nav-btn"><img
+class="nav-open" src=
+      "https://s3-us-west-
+2.amazonaws.com/s.cdpn.io/6214/nav-open.png" alt="Nav
+Button Open" /> <img class="nav-close"
+src="https://s3-us-west-
+2.amazonaws.com/s.cdpn.io/6214/nav-close.png"
+alt="Nav Button Close" /> </div>
+          <nav>
+            <ul>
+              <li><a href="{% url 'homepage' %}"><i class="fa fa-home"></i></a></li>
+              <li><a href="{%url 'hotels' %}"> Popular Hotels </a></li>
+              <li><a href="{%url 'restaurants' %}"> Popular Restaurants</a></li>
+
+
+            </ul>
+          </nav>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="login">
+
+          <ul>
+           <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            <li><a href="{% url 'dashboard' %}">{{ user.first_name }}</a></li>
+          </ul>
+        </div>
+        {% else %}
+        <div class="login">
+
+          <ul>
+           <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'signup' %}">Register</a></li>
+
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+{% block content %}
+{% endblock %}
+</div>
+<footer class="saction9  container">
+
+
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="email"> Made By:</div>
+        <p class="freetemplates">IET Lucknow </p>
+      </div>
+
+
+</footer>
+<script type="text/javascript"
+src="{% static 'home/js/sidemenu.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "home/header.html" %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>LOGOUT</title>
+</head>
+<body>
+<div class="center-block text-center" style="margin:50px;">
+    <h1> You are logged out..</h1>
+    <p> Click here to <a href="{% url 'login' %}" style="color:Red;">Login</a> again..</p>
+</div>
+</body>
+{% endblock %}

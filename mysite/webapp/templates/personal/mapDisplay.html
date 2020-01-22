@@ -1,0 +1,29 @@
+{% extends "home/header.html" %}
+{% block content%}
+	<style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+<h3><span style="color:red;">{{address}}</span></h3>
+    <div id="map" style="margin-bottom:40px;"></div>
+    <script>
+      function initMap() {
+        var adrs = {lat: {{lat}}, lng:{{longt}} };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: adrs
+        });
+        var marker = new google.maps.Marker({
+          position: adrs,
+          map: map
+
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWtysGuiNFrZVS3MnoqXMT0ToUyLGG1dI&callback=initMap">
+    </script>
+
+{% endblock %}

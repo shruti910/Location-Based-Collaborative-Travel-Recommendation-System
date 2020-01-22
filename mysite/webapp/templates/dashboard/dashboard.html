@@ -1,0 +1,160 @@
+{% extends "home/header.html" %}
+{% load static %}
+{% load app_filters%}
+{% block content %}
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+     {% csrf_token %}
+{% if user.is_authenticated %}
+
+     <div class=  "main11" >
+     <div class="row">
+         <div class="col-md-6">
+          <h1 class="page-header">Welcome <span style="color:red;">{{user.first_name}}</span></h1>
+         </div>
+
+     </div>
+<h1 style="color:red;">Ratings given by you:</h1>
+          <h2>Recent ratings:</h2>
+         <h3 style="color:red;">Destinations:</h3>
+         {% for u in pfile%}
+
+    <div class=" panel panel-info">
+        <div class="panel-heading">
+                    <h2 class="panel-title text-uppercase "><b>{{u.place}}</b></h2>
+
+        </div>
+        <div class="panel-body">
+             <div class="col-md-6">
+                     <div class="jq">
+    <div class="stars-outer">
+        <div class="stars-inner"></div>
+    </div>
+    <div class="fstar text-muted">{{u.star|floatformat}}</div>
+
+</div>
+             </div></div></div>
+{%endfor%}
+<h3 style="color:red;">Restaurants:</h3>
+ {% for u in rfile%}
+
+    <div class=" panel panel-info">
+        <div class="panel-heading">
+                    <h2 class="panel-title text-uppercase "><b>{{u.place}}</b></h2>
+
+        </div>
+        <div class="panel-body">
+             <div class="col-md-6">
+                  <div class="jq">
+    <div class="stars-outer">
+        <div class="stars-inner"></div>
+    </div>
+    <div class="fstar text-muted">{{u.star|floatformat}}</div>
+
+</div>
+             </div></div></div>
+{%endfor%}
+         <h3 style="color:red;">Hotels:</h3>
+ {% for u in hfile%}
+
+    <div class=" panel panel-info">
+        <div class="panel-heading">
+                    <h2 class="panel-title text-uppercase "><b>{{u.place}}</b></h2>
+
+        </div>
+        <div class="panel-body">
+             <div class="col-md-6">
+                    <div class="jq">
+    <div class="stars-outer">
+        <div class="stars-inner"></div>
+    </div>
+    <div class="fstar text-muted">{{u.star|floatformat}}</div>
+
+</div>
+             </div></div></div>
+{%endfor%}
+<h2 style="color:red;">Past History:</h2>
+{% for u in user_review %}
+
+    <div class=" panel panel-info">
+        <div class="panel-heading">
+                    <h2 class="panel-title text-uppercase "><b>{{u.name}}</b></h2>
+
+        </div>
+        <div class="panel-body">
+             <div class="col-md-6">
+                    <div class="jq">
+    <div class="stars-outer">
+        <div class="stars-inner"></div>
+    </div>
+    <div class="fstar text-muted">{{u.stars|floatformat}}</div>
+
+</div>
+             <h4 class="text-muted">Review Count:{{u.review_count}}</h4>
+                  <h4 class="text-muted">Address:{{u.address}}</h4>
+             <h4 class="text-muted">City:{{u.city}}</h4>
+             <h4 class="text-muted">State:{{u.state}}</h4>
+             <h4 class="text-muted">Postal code:{{u.postal_code}}</h4>
+             <h4 class="text-muted">Neighbourhood:{{u.neighborhood}}</h4>
+
+
+            <h4 class="text-muted">Average cost for four (approx.):{{u.c}}</h4>
+                  <h4 class="text-muted">Categories:</h4>
+            <h5 class="text-muted">{{u.categories}}</h5>
+
+             </div>
+            <div class="col-md-6">
+
+
+                 <form method="post" action="{% url 'mapdisplay' %}">
+  {% csrf_token %}
+          <div class="form-group">
+  <input type="text" value="{{u.latitude}}"  name="name1" class="form-control" style="display:none;" />
+    <input type="text" value="{{u.longitude}}"  name="name2" class="form-control" style="display:none;" />
+     <input type="text" value="{{u.address}}" name="name3" class="form-control" style="display:none;"/>
+                            </div>
+
+
+ <button type="submit" class="btn btn-sm btn-info" name="b4">Show on Map</button>
+      <button type="submit" class="btn btn-sm btn-info" name="b5">Calculate Distance</button>
+       <button type="submit" class="btn btn-sm btn-info" name="b6">Get Directions</button>
+
+                        </form>
+                <div style=margin-top:20px;">
+                          <form method="post" action="{% url 'nearbyrec' %}">
+  {% csrf_token %}
+                   <div class="form-group">
+     <input type="text" value="{{u.city}}" id="n1" name="name" class="form-control" style="display:none;" />
+                       <input type="text" value="{{u.state}}" id="n2" name="name1" class="form-control" style="display:none;" />
+
+                            </div>
+           <button type="submit" class="btn btn-sm btn-success" name="btn1" >Search nearby Destinations /Restaurants /Hotels</button>
+                          </form>
+                        </div>
+
+            </div></div>
+    </div>
+
+
+         {%endfor %}
+
+
+     </div>
+     {% endif %}
+<script>
+    $(window).load(function () {
+    $( ".jq" ).each(function() {
+    const starTotal = 5;
+    var number = parseFloat($(this).find('.fstar').text(),10);
+     const starPercentage = (number / starTotal);
+     const starPercentageRounded = `${starPercentage*100}%`;
+$(this).find('.stars-inner').css("width",starPercentageRounded);
+});
+            });
+</script>
+
+</body>
+
+{% endblock %}

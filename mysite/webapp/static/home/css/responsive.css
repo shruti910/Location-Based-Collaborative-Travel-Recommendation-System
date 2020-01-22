@@ -1,0 +1,1210 @@
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (min-width: 960px) and (max-width: 1200px) {
+header {
+	padding: 25px 0 10px;
+}
+.contact {
+	font-size: 13px;
+}
+.img {
+	width: 100%;
+	float: none;
+}
+.img img {
+	width: 100%;
+}
+.title {
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+.menu a {
+	font-size: 13px;
+	padding-right: 10px;
+}
+.login a {
+	font-size: 15px;
+}
+.time {
+	font-size: 12px;
+}
+.line1 {
+	height: 4px;
+	width: 23%;
+	top: 85%;
+	left: 9%;
+}
+.line2 {
+	height: 4px;
+	width: 23%;
+	top: 90%;
+	left: 9%;
+}
+.line3 {
+	height: 4px;
+	width: 23%;
+	top: 85%;
+	right: 9%;
+}
+.line4 {
+	height: 4px;
+	width: 23%;
+	top: 90%;
+	right: 9%;
+}
+.textbox input {
+	font-size: 18px;
+	margin-top: 5px;
+	width: 100%;
+}
+.textbox1 input {
+	font-size: 18px;
+	margin-top: 5px;
+	width: 64%;
+}
+.search {
+	margin-left: 5px;
+	padding: 10px 18px;
+}
+.search a {
+	color: #FFF;
+	font-size: 21px;
+}
+.dotted {
+	width: 20%;
+	top: 85%;
+	left: 12%;
+}
+.dotted1 {
+	width: 20%;
+	top: 85%;
+	right: 12%;
+}
+.food1 {
+	padding: 10px 0 10px;
+}
+.step img {
+	text-align: center;
+	display: block;
+	margin: 50px auto;
+}
+.arrow {
+	display: none;
+}
+.arrow1 {
+	display: none;
+}
+.step1 img {
+	text-align: center;
+	display: block;
+	margin: 50px auto;
+}
+.dotted7 {
+	border: 1px dashed #515151;
+	width: 65%;
+	display: inline-block;
+	top: 2%;
+	position: absolute;
+	right: 5%;
+}
+.rest {
+	padding-top: 15px;
+}
+.restaurants h3 {
+	font-size: 30px;
+}
+.food h3 {
+	font-size: 30px;
+}
+.food img {
+	margin-top: 10px;
+}
+.order {
+	width: 170px;
+	padding: 10px;
+	text-align: center;
+}
+.images h3 {
+	text-align: center;
+	font-size: 27px;
+	padding: 30px 0;
+}
+.point a {
+	font-size: 14px;
+}
+.imgs img {
+	margin-top: 10%;
+	width: 100%;
+}
+.button {
+	margin: 64px 0px;
+	padding: 10px;
+}
+.button a {
+	font-size: 20px;
+}
+.dotted6 {
+	border: 1px dashed #515151;
+	width: 28%;
+	display: inline-block;
+	top: 2%;
+	position: absolute;
+	right: 1%;
+}
+}
+ @media only screen and (min-width: 768px) and (max-width: 959px) {
+.contact {
+	font-size: 12px;
+	float: right;
+	font-weight: 600;
+}
+.time {
+	font-size: 12px;
+	color: #727272;
+	margin-left: 10px;
+}
+.menu a {
+	color: #494949;
+	font-size: 12px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-right: 10px;
+	border-right: 1px solid #CCCCCC;
+}
+.img {
+	width: 100%;
+	float: none;
+}
+.img img {
+	width: 100%;
+}
+.title {
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+.login a {
+	margin-left: 10px;
+	font-size: 14px;
+	padding-right: 20px;
+}
+.back h2 {
+	text-align: center;
+	color: #FFF;
+	font-size: 25px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin-top: 100px;
+}
+.back h3 {
+	text-align: center;
+	color: #FFF;
+	font-size: 25px;
+	font-weight: 400;
+	letter-spacing: 2px;
+}
+.textbox h3 {
+	margin-top: 35px;
+	color: #FFF;
+	font-weight: 400;
+	font-size: 15px;
+}
+.textbox1 h3 {
+	margin-top: 35px;
+	color: #FFF;
+	font-weight: 400;
+	font-size: 15px;
+}
+.textbox input {
+	border: hidden;
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: 5px;
+	width: 100%;
+	min-height: 41px;
+	border-radius: 4px;
+}
+.textbox1 input {
+	border: hidden;
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: 5px;
+	width: 60%;
+	min-height: 41px;
+	border-radius: 4px;
+}
+.search {
+	margin-left: 20px;
+	padding: 10px 15px;
+}
+.dotted {
+	width: 20%;
+	display: inline-block;
+	top: 90%;
+	left: 12%;
+}
+.dotted1 {
+	border: 1px dashed #515151;
+	width: 20%;
+	display: inline-block;
+	top: 90%;
+	position: absolute;
+	right: 12%;
+}
+.dotted7 {
+	border: 1px dashed #515151;
+	width: 47%;
+	display: inline-block;
+	top: 2%;
+	position: absolute;
+	right: 16%;
+}
+.step img {
+	text-align: center;
+	display: block;
+	margin: 10px auto;
+}
+.rest {
+	padding-top: 10px;
+}
+.saction3 {
+	padding: 30px 0 30px;
+}
+.saction4 {
+	background-color: #f1f1f1;
+	padding: 30px 0 30px;
+}
+.restaurants h3 {
+	font-family: 'Lobster Two', cursive;
+	color: #515151;
+	font-size: 26px;
+}
+.dotted6 {
+	border: 1px dashed #515151;
+	width: 15%;
+	display: inline-block;
+	top: 2%;
+	position: absolute;
+	right: 0%;
+}
+.food h3 {
+	font-family: 'Lobster Two', cursive;
+	color: #515151;
+	font-size: 30px;
+}
+.food1 {
+	padding: 5px 0 5px;
+}
+.food img {
+	margin-top: 10px;
+}
+.order {
+	background-color: #f1f1f1;
+	width: 81%;
+	margin-top: -8px;
+	padding: 10px;
+	text-align: center;
+	font-weight: 700;
+	border-radius: 0px 0 8px 8px;
+	border: 1px solid #DADADA;
+}
+.silder img {
+	width: 33%;
+	margin-top: 20px;
+}
+.images h3 {
+	font-family: 'Lobster Two', cursive;
+	color: #ffcc00;
+	font-size: 20px;
+	padding: 34px 0;
+}
+.point a {
+	color: #FFFFFF;
+	font-weight: 700;
+	font-size: 13px;
+}
+.imgs img {
+	margin-top: 40px;
+	width: 110%;
+}
+.button {
+	background-color: #0C0;
+	margin: 55px 0px;
+	padding: 10px;
+	border: 2px solid #FFF;
+	border-radius: 4px;
+	cursor: pointer;
+	text-align: center;
+}
+.button a {
+	color: #FFF;
+	font-weight: 700;
+	font-size: 13px;
+	text-align: center;
+	margin: 0 auto;
+	text-decoration: none;
+}
+.service img {
+	width: 85%;
+}
+.det {
+	width: 60%;
+	float: right;
+}
+.det h3 {
+	font-family: 'Lobster Two', cursive;
+	color: #5bbd50;
+	font-size: 14px;
+}
+.det p {
+	font-size: 12px;
+	font-weight: 700;
+}
+.sub {
+	padding: 8px;
+	border-radius: 4px;
+	margin: 10px 0;
+}
+.saction8 {
+	background-color: #515151;
+	padding: 60px 0 10px;
+}
+.arrow1 {
+	display: none;
+}
+.step1 img {
+	text-align: center;
+	display: block;
+	margin: 10px auto;
+}
+.email {
+
+	text-align:center;
+}
+.freetemplates { text-align:center;
+	}
+}
+ @media only screen and (min-width: 640px) and (max-width: 767px) {
+.logo {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding-bottom: 20px;
+}
+
+.img {
+	width: 100%;
+	float: left;
+	text-align: center;
+	margin: 0 auto;
+}
+.img img {
+	width: 100%;
+}
+.title {
+	float: right;
+	width: 100%;
+	text-align: center;
+}
+.slider {
+	width: 55%;
+	margin: 30px auto;
+	text-align: center;
+	display: block;
+}
+.login a {
+	margin-left: 10px;
+	font-size: 13px;
+	padding-right: 5px;
+	border-right: 1px solid #CCCCCC;
+	transition: all 0.3s;
+}
+.contact {
+	font-size: 20px;
+	float: none;
+	text-align: center;
+}
+.back h2 {
+	font-size: 30px;
+	margin-top: 40px;
+}
+.back h3 {
+	font-size: 25px;
+}
+.line1 {
+	width: 30%;
+	top: 75%;
+	left: 3%;
+}
+.line2 {
+	width: 30%;
+	top: 85%;
+	left: 3%;
+}
+.line3 {
+	width: 30%;
+	top: 85%;
+	right: 3%;
+}
+.line4 {
+	width: 30%;
+	top: 75%;
+	right: 3%;
+}
+.backgraound {
+	min-height: 400px;
+}
+.textbox h3 {
+	margin-top: 15px;
+	font-size: 15px;
+}
+.textbox1 h3 {
+	margin-top: 15px;
+	font-size: 15px;
+}
+.dotted {
+	width: 20%;
+	top: 85%;
+}
+.dotted1 {
+	width: 20%;
+	top: 85%;
+}
+.saction3 {
+	padding: 30px 0 30px;
+}
+.restaurants h3 {
+	text-align: center;
+}
+.dotted7 {
+	display: none;
+}
+.arrow, .arrow1 {
+	display: none;
+}
+.step img {
+	text-align: center;
+	display: block;
+	margin: 10px auto;
+}
+.step1 img {
+	text-align: center;
+	display: block;
+	margin: 10px auto;
+}
+.rest {
+	padding-top: 20px;
+}
+.rest a {
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.food1 {
+	padding: 30px 0 10px;
+	text-align: center;
+	margin: 0 auto;
+	width: 62%;
+}
+.food1 {
+	padding: 5px 0 5px;
+}
+.food h3 {
+	text-align: center;
+}
+.images h3 {
+	text-align: center;
+	font-size: 25px;
+}
+.point {
+	margin: 10px 0 10px;
+	text-align: center;
+}
+.saction4 {
+	background-color: #f1f1f1;
+	padding: 30px 0 30px;
+}
+.dotted4 {
+	border: 1px dashed #515151;
+	width: 22%;
+	display: inline-block;
+	top: 50%;
+	position: absolute;
+	right: 12%;
+}
+.dotted3 {
+	border: 1px dashed #515151;
+	width: 22%;
+	display: inline-block;
+	top: 50%;
+	position: absolute;
+	right: 12%;
+}
+.dotted6 {
+	display: none;
+}
+.slider img {
+	width: 50%;
+	text-align: center;
+	margin: 5px auto;
+	display: block;
+}
+.imgs img {
+	margin-top: 10px;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+.button {
+	text-align: center;
+	margin: 15px 38%;
+}
+.service {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+.det {
+	width: 100%;
+	float: right;
+	text-align: center;
+}
+.saction8 {
+	padding: 15px 0 25px;
+}
+.site {
+	margin-top: 25px;
+}
+.site h3 {
+	text-align: center;
+}
+.sitelink li {
+	text-align: center;
+}
+.follow h3 {
+	text-align: center;
+}
+.follow {
+	margin-top: 25px;
+}
+.social li {
+	text-align: center;
+}
+.submit {
+	margin-top: 25px;
+}
+.submit h3 {
+	text-align: center;
+}
+.submit p {
+	text-align: center;
+}
+.sub {
+	text-align: center;
+	margin: 5px auto;
+}
+.order {
+	width: 170px;
+}
+.email {
+
+	text-align:center;
+}
+.freetemplates { text-align:center;
+	}
+	.menu a {
+	font-size: 18px;
+	color: #FFF;
+	border-right: none;
+}
+}
+ @media only screen and (min-width: 480px) and (max-width: 639px) {
+header {
+	padding: 20px 0 1px;
+}
+.logo {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding-bottom: 20px;
+}
+.contact {
+	font-size: 14px;
+	text-align: center;
+}
+.time {
+	font-size: 14px;
+}
+.menu a {
+	font-size: 18px;
+	color: #FFF;
+	border-right: none;
+}
+.img {
+	width: 100%;
+	float: left;
+	text-align: center;
+	margin: 0 auto;
+}
+.img img {
+	width: 100%;
+}
+.title {
+	float: right;
+	width: 100%;
+	text-align: center;
+}
+.slider {
+	width: 55%;
+	margin: 30px auto;
+	text-align: center;
+	display: block;
+}
+.login a {
+	padding-right: 10px;
+	font-size: 15px;
+}
+.back h2 {
+	margin-top: 40px;
+	font-size: 25px;
+}
+.back h3 {
+	font-size: 20px;
+}
+.line1 {
+	width: 30%;
+	top: 75%;
+}
+.line2 {
+	width: 30%;
+	top: 85%;
+}
+.line3 {
+	width: 30%;
+	top: 75%;
+}
+.line4 {
+	width: 30%;
+	top: 85%;
+}
+.textbox h3 {
+	margin-top: 25px;
+	font-size: 15px;
+}
+.textbox1 h3 {
+	margin-top: 25px;
+	font-size: 15px;
+}
+.backgraound {
+	min-height: 400px;
+}
+.saction3 {
+	padding: 40px 0 50px;
+}
+.dotted {
+	width: 20%;
+	top: 85%;
+}
+.ordaring h2 {
+	font-size: 30px;
+}
+.ordaring p {
+	font-size: 20px;
+}
+.dotted1 {
+	width: 20%;
+	top: 85%;
+}
+.saction4 {
+	padding: 40px 0 20px;
+}
+.arrow, .arrow1 {
+	display: none;
+}
+.dotted3 {
+	display: none;
+}
+.dotted4 {
+	display: none;
+}
+.dotted6 {
+	display: none;
+}
+.dotted7 {
+	display: none;
+}
+.step img {
+	text-align: center;
+	display: block;
+	margin: 10px auto;
+}
+.saction5 {
+	padding: 35px 0;
+}
+.rest {
+	padding-top: 10px;
+}
+.restaurants h3 {
+	text-align: center;
+}
+.food {
+	margin: 5px 0;
+}
+.food h3 {
+	text-align: center;
+	margin-top: 25px;
+}
+.food1 {
+	padding: 10px 0 5px;
+}
+.order {
+	width: 170px;
+}
+.service {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+.det {
+	width: 100%;
+	float: right;
+	text-align: center;
+}
+.saction8 {
+	padding: 15px 0 25px;
+}
+.site {
+	margin-top: 25px;
+}
+.site h3 {
+	text-align: center;
+}
+.sitelink li {
+	text-align: center;
+}
+.follow h3 {
+	text-align: center;
+}
+.follow {
+	margin-top: 25px;
+}
+.social li {
+	text-align: center;
+}
+.submit {
+	margin-top: 25px;
+}
+.submit h3 {
+	text-align: center;
+}
+.submit p {
+	text-align: center;
+}
+.sub {
+	width: 20%;
+	text-align: center;
+	margin: 5px auto;
+}
+.images h3 {
+	text-align: center;
+	font-size: 25px;
+}
+.point {
+	margin: 10px 0 10px;
+	text-align: center;
+}
+.imgs img {
+	margin-top: 10px;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+}
+.button {
+	text-align: center;
+	margin: 15px 38%;
+}
+.button a {
+	font-size: 13px;
+}
+.email {
+
+	text-align:center;
+}
+.freetemplates { text-align:center;
+	}
+}
+ @media only screen and (max-width: 479px) {
+header {
+	padding: 20px 0 1px;
+}
+.logo {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding-bottom: 20px;
+}
+.dotted7 {
+	display: none;
+}
+.contact {
+	font-size: 14px;
+	text-align: center;
+}
+.time {
+	font-size: 14px;
+}
+.menu a {
+	font-size: 18px;
+	color: #FFF;
+	border-right: none;
+}
+.menu li {
+	float: left;
+	padding: 10px 5px 20px;
+}
+.login a {
+	margin-left: 5px;
+	font-size: 12px;
+	padding-right: 5px;
+}
+.back h2 {
+	margin-top: 40px;
+	font-size: 25px;
+}
+.back h3 {
+	font-size: 20px;
+}
+.line1 {
+	width: 20%;
+	top: 83%;
+}
+.line2 {
+	width: 20%;
+	top: 90%;
+}
+.line3 {
+	width: 20%;
+	top: 83%;
+}
+.line4 {
+	width: 20%;
+	top: 90%;
+}
+.textbox h3 {
+	margin-top: 25px;
+	font-size: 15px;
+}
+.textbox1 input {
+	width: 70%;
+}
+.search {
+	padding: 10px 10px;
+}
+.textbox1 h3 {
+	margin-top: 15px;
+	font-size: 15px;
+}
+.backgraound {
+	min-height: 400px;
+}
+.saction3 {
+	padding: 30px 0 20px;
+}
+.ordaring h2 {
+	font-size: 25px;
+}
+.ordaring p {
+	font-size: 20px;
+}
+.dotted {
+	display: none;
+}
+.dotted1 {
+	display: none
+}
+.arrow, .arrow1 {
+	display: none;
+}
+.step {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+}
+.saction4 {
+	padding: 30px 0 30px;
+}
+.slider img {
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+.title h3 {
+	margin: 0px 10px 10px;
+	font-size: 15px;
+}
+.title p {
+	font-size: 13px;
+	line-height: 16px;
+	margin: 0 8px 20px;
+}
+.title a {
+	font-size: 14px;
+	padding: 8px;
+	margin: 0 10px;
+}
+.dotted4 {
+	display: none;
+}
+.dotted3 {
+	display: none;
+}
+.dotted6 {
+	display: none;
+}
+.saction5 {
+	padding: 25px 0 25px;
+}
+.restaurants h3 {
+	text-align: center;
+	font-size: 30px;
+}
+.rest {
+	padding-top: 20px;
+}
+.rest img {
+	width: 70%;
+}
+.rest a {
+	height: 80px;
+}
+.food h3 {
+	margin-top: 25px;
+	font-size: 30px;
+	text-align: center;
+}
+.food1 {
+	padding: 10px 0 5px;
+}
+.food img {
+	width: 100%;
+	margin: 10px 0 0;
+}
+.order {
+	width: 100%;
+	font-size: 12px;
+}
+.service {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+.det {
+	width: 100%;
+	float: right;
+	text-align: center;
+}
+.saction8 {
+	padding: 15px 0 25px;
+}
+.site {
+	margin-top: 25px;
+}
+.site h3 {
+	text-align: center;
+}
+.sitelink li {
+	text-align: center;
+}
+.follow h3 {
+	text-align: center;
+}
+.follow {
+	margin-top: 25px;
+}
+.social li {
+	text-align: center;
+}
+.submit {
+	margin-top: 25px;
+}
+.submit h3 {
+	text-align: center;
+}
+.submit p {
+	text-align: center;
+}
+.sub {
+	text-align: center;
+	margin: 5px auto;
+}
+.images h3 {
+	text-align: center;
+	font-size: 25px;
+}
+.point {
+	margin: 10px 0 10px;
+	text-align: center;
+}
+.imgs img {
+	margin-top: 10px;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+}
+.button {
+	text-align: center;
+	margin: 15px 30%;
+}
+.button a {
+	font-size: 18px;
+}
+.email {
+	color: #5bbd50;
+	font-weight: 600;
+	text-align: center;
+}
+.img {
+	width: 100%;
+	float: left;
+	text-align: center;
+	margin: 0 auto;
+}
+.img img {
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+.title {
+	float: right;
+	width: 100%;
+	text-align: center;
+}
+.slider {
+	width: 60%;
+	margin: 30px auto;
+	text-align: center;
+	display: block;
+}
+.email {
+
+	text-align:center;
+}
+.freetemplates { text-align:center;
+	}
+}
+ @media (max-width: 767px) {
+nav {
+	display: none;
+}
+}
+nav ul {
+	margin: 0;
+	overflow: hidden;
+}
+nav li {
+	color: #fefefe;
+	float: left;
+	list-style: none;
+}
+nav li:hover, nav li:focus {
+	color: #fdb32b;
+}
+@media (max-width: 767px) {
+nav li {
+	display: none;
+}
+}
+nav.active-nav {
+	background: none;
+	display: block;
+	position: fixed;
+	width: 95%;
+}
+nav.active-nav li {
+	display: block;
+	float: none;
+	font-size: 35px;
+	font-weight: bold;
+	opacity: 0;
+	text-align: center;
+}
+.mobile-nav-container {
+	background: #666666;
+	border-radius: 50%;
+	bottom: 25px;
+	color: #333;
+	display: none;
+	height: 50px;
+	left: 25px;
+	position: fixed;
+	-moz-transition: all 0.25s ease-out;
+	-o-transition: all 0.25s ease-out;
+	-webkit-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+	width: 50px;
+	z-index: 10;
+}
+@media (max-width: 767px) {
+.mobile-nav-container {
+	display: block;
+	cursor: pointer;
+}
+}
+.mobile-nav-container.active-nav {
+	bottom: -1000px;
+	height: 2000px;
+	left: -1000px;
+	width: 2000px;
+}
+.mobile-nav-btn .nav-open {
+	display: block;
+	cursor: pointer;
+}
+.mobile-nav-btn .nav-close {
+	display: none;
+	cursor: pointer;
+}
+.mobile-nav-btn.active-nav .nav-open {
+	display: none;
+}
+.mobile-nav-btn.active-nav .nav-close {
+	display: block;
+}
+.mobile-nav-btn {
+	bottom: 38px;
+	display: none;
+	left: 38px;
+	position: fixed;
+	-moz-transition: none;
+	-o-transition: none;
+	-webkit-transition: none;
+	transition: none;
+	width: 50px;
+	z-index: 100;
+}
+@media (max-width: 767px) {
+.mobile-nav-btn {
+	display: block;
+}
+}
+nav.active-nav li.show-nav {
+	opacity: 1;
+	-moz-transition: all 0.25s ease-out;
+	-o-transition: all 0.25s ease-out;
+	-webkit-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+}
+.nav-open, .nav-close {
+	width: 50%;
+}
+.crop {
+	overflow: hidden;
+}

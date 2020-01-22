@@ -1,0 +1,268 @@
+﻿{% extends "home/header.html" %}
+{% load static %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+{% block content %}
+<section class="backgraound">
+  <div class="container" >
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="back">
+          <div class="line1 os-animation" data-os-
+animation="rotateInDownLeft" data-os-animation-
+delay="1s"> </div>
+          <div class="line2 os-animation" data-os-
+animation="rotateInDownLeft" data-os-animation-
+delay="1s"> </div>
+          <h2 class="os-animation" data-os-
+animation="zoomIn" data-os-animation-
+delay="0.50s">Find the best tourist places</h2>
+          <h3 class="os-animation" data-os-
+animation="zoomIn" data-os-animation-delay="1s">In your Locality</h3>
+          <div class="line3 os-animation" data-os-
+animation="rotateInDownRight" data-os-animation-
+delay="1s"> </div>
+          <div class="line4 os-animation" data-os-
+animation="rotateInDownRight" data-os-animation-
+delay="1s"> </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+     <div class="mamta text-center" style="padding-top:40px;">
+        <h3 style="color:white;">STATE</h3>
+          <form  method="post">
+              {% csrf_token %}
+           {{ form.state}}
+
+        <button  type="submit" class="btn btn-primary btn-lg">submit</button>
+
+
+        </form>
+         </div>
+      </section>
+
+
+
+<section class="saction4">
+  <div class="container" id="offer">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="dotted3 os-animation" data-os-
+animation="bounceInLeft" data-os-animation-
+delay="1s"></div>
+        <div class="special">
+          <h2 class="os-animation" data-os-
+animation="bounceInDown" data-os-animation-
+delay="0.50s">Popular Destinations</h2>
+          <div class="dotted4 os-animation" data-os-
+animation="bounceInRight" data-os-animation-
+delay="1s"></div>
+        </div>
+      </div>
+    </div>
+
+
+    {% for p in places %}
+    <div class="col-lg-4 col-md-4 col-sm-4 jq">
+      <div class="slider clearfix os-animation"
+data-os-animation="fadeInDown
+" data-os-animation-delay="1s">
+        <div class="img"> <img src="{% static p.image_url %}" width="153px" height='164px' /> </div>
+        <div class="title">
+          <h3> {{p.place}}</h3>
+          <div class="stars-outer">
+        <div class="stars-inner"></div>
+    </div>
+    <div class="fstar text-muted">{{p.stars|floatformat}}</div>
+            <h3>{{p.state}}</h3>
+            <form method="post" action="{% url 'placedisplay' %}">
+  {% csrf_token %}
+           <input type="text" value="{{p.pid}}" id="vat1" name="name"  style="display:none;" />
+          <button type="submit" class="btn btn-xs btn-info" name="b1">Visit &#10152;</button>
+                 </form>
+        </div>
+      </div>
+    </div>
+      {%endfor%}
+  </div>
+</section>
+<section class="saction4">
+  <div class="container" >
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="dotted3 os-animation" data-os-
+animation="bounceInLeft" data-os-animation-
+delay="1s"></div>
+        <div class="special">
+          <h2 class="os-animation" data-os-
+animation="bounceInDown" data-os-animation-
+delay="0.50s">Popular Hotels</h2>
+          <div class="dotted4 os-animation" data-os-
+animation="bounceInRight" data-os-animation-
+delay="1s"></div>
+        </div>
+      </div>
+    </div>
+
+
+    {% for p in photel %}
+
+    <div class="col-lg-4 col-md-4 col-sm-4 jq">
+      <div class="slider clearfix os-animation"
+data-os-animation="fadeInDown
+" data-os-animation-delay="1s">
+        <div class="img"> <img src="{% static p.image_url %}" width="153px" height='164px' /> </div>
+        <div class="title">
+          <h3> {{p.name_x}}</h3>
+          <div class="stars-outer">
+        <div class="stars-inner"></div>
+    </div>
+    <div class="fstar text-muted">{{p.stars|floatformat}}</div>
+ <form method="post" action="{% url 'hoteldisplay' %}">
+  {% csrf_token %}
+           <input type="text" value="{{p.business_id}}"  name="name"  style="display:none;" />
+     <input type="text" value="{{p.image_url}}"  name="name1"  style="display:none;" />
+          <button type="submit" class="btn btn-xs btn-info" name="b5">Visit &#10152;</button>
+                 </form>
+        </div>
+      </div>
+    </div>
+      {%endfor%}
+  </div>
+</section>
+
+<section class="saction4">
+  <div class="container" >
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="dotted3 os-animation" data-os-
+animation="bounceInLeft" data-os-animation-
+delay="1s"></div>
+        <div class="special">
+          <h2 class="os-animation" data-os-
+animation="bounceInDown" data-os-animation-
+delay="0.50s">Popular Restaurants</h2>
+          <div class="dotted4 os-animation" data-os-
+animation="bounceInRight" data-os-animation-
+delay="1s"></div>
+        </div>
+      </div>
+    </div>
+
+
+    {% for p in prest %}
+    <div class="col-lg-4 col-md-4 col-sm-4 jq">
+      <div class="slider clearfix os-animation"
+data-os-animation="fadeInDown
+" data-os-animation-delay="1s">
+        <div class="img"> <img src="{% static p.image_url %}" width="153px" height='164px' /> </div>
+        <div class="title">
+          <h3> {{p.name_x}}</h3>
+          <div class="stars-outer">
+        <div class="stars-inner"></div>
+    </div>
+    <div class="fstar text-muted">{{p.stars|floatformat}}</div>
+<form method="post" action="{% url 'restdisplay' %}">
+  {% csrf_token %}
+           <input type="text" value="{{p.business_id}}"  name="name"  style="display:none;" />
+    <input type="text" value="{{p.image_url}}"  name="name1"  style="display:none;" />
+          <button type="submit" class="btn btn-xs btn-info" name="b3">Visit &#10152;</button>
+                 </form>
+        </div>
+      </div>
+    </div>
+      {%endfor%}
+  </div>
+</section>
+
+
+
+<section class="saction6">
+  <div class="container">
+    <div class="row bg os-animation" data-os-
+animation="flash" data-os-animation-delay="1s">
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="images">
+          <h3 class="os-animation">Enjoy Exclusive
+Food
+           </h3>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <div class="point">
+          <p><span>&#10152;</span><a href="#"> LUNCH</a></p>
+          <p><span>&#10152;</span><a href="#">BREAKFAST</a></p>
+          <p><span>&#10152;</span><a href="#">DINNER</a></p>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-5">
+        <figure class="imgs"> <img
+src="{% static 'home/images/abc.png' %}" alt="" /> </figure>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <div class="button"> <a href="#">Discover</a> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="saction7">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4  col-
+xs-12">
+        <figure class="service os-animation" data-
+os-animation="fadeInDown" data-os-animation-
+delay="1s"> <img src="{% static 'home/images/Great-choice.png' %}" alt=""/>
+</figure>
+        <div class="det os-animation" data-os-
+animation="fadeInDown" data-os-animation-
+delay="1.3s">
+          <h3>Freedom of Choice </h3>
+          <p>Dozens of restaurants and hotels in hundreds of cities! </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4  col-
+xs-12">
+        <figure class="service os-animation" data-
+os-animation="fadeInDown" data-os-animation-
+delay="1.5s"> <img src="{% static 'home/images/DealsDiscounts.png' %}" alt="" />
+</figure>
+        <div class="det os-animation" data-os-
+animation="fadeInDown" data-os-animation-
+delay="1.8s">
+          <h3>Great offers, deals and discounts</h3>
+          <p>Our daily deals will help you get free delivery or a nice discount from your favorite place.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-
+12">
+        <figure class="service os-animation" data-
+os-animation="fadeInDown" data-os-animation-
+delay="2s"> <img src="{% static 'home/images/easyuse.png' %}" alt=""/>
+</figure>
+        <div class="det os-animation" data-os-
+animation="fadeInDown" data-os-animation-
+delay="2.3s">
+          <h3>Finding restaurants and hotels is easy as ABC </h3>
+          <p>24/7: Our site is available 24/7.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+    $(window).load(function () {
+    $( ".jq" ).each(function() {
+    const starTotal = 5;
+    var number = parseFloat($(this).find('.fstar').text(),10);
+
+     const starPercentage = (number / starTotal);
+     const starPercentageRounded = `${starPercentage*100}%`;
+$(this).find('.stars-inner').css("width",starPercentageRounded);
+});
+            });
+</script>
+{% endblock %}

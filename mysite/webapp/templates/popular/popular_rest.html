@@ -1,0 +1,62 @@
+{% extends "home/header.html" %}
+{% load static %}
+
+{% block content %}
+<div class=  "main11" >
+     <div class="row">
+         <div class="col-md-6">
+          <h1 class="page-header">Popular Restaurants</h1>
+         </div>
+     </div>
+
+{% for q in qrest%}
+    <div class=" panel panel-info">
+        <div class="panel-heading">
+                    <h2 class="panel-title text-uppercase "><b>{{q.name_x}}</b></h2>
+        </div>
+        <div class="panel-body row">
+     <div class="col-md-6"> <div class="jq">
+    <div class="stars-outer">
+        <div class="stars-inner"></div>
+    </div>
+    <div class="fstar text-muted">{{q.stars|floatformat}}</div>
+
+</div>
+<p>Reviewed by:&nbsp; {{q.total_ratings}}&nbsp; people</p>
+<p> Address:{{q.address}}</p>
+            <p>City: {{q.city}}</p>
+<p>State: {{q.state}}</p>
+
+       <form method="post" action="{% url 'mapdisplay' %}">
+  {% csrf_token %}
+          <div class="form-group">
+  <input type="text" value="{{q.latitude}}"  name="name1" class="form-control" style="display:none;" />
+    <input type="text" value="{{q.longitude}}"  name="name2" class="form-control" style="display:none;" />
+              <input type="text" value="{{q.address}}" name="name3" class="form-control" style="display:none;"/>
+                            </div>
+        </div>
+            <div class="col-md-6">
+ <button type="submit" class="btn btn-sm btn-info" name="b4">Show on Map</button>
+                            <button type="submit" class="btn btn-sm btn-info" name="b5">Calculate Distance</button>
+                            <button type="submit" class="btn btn-sm btn-info" name="b6">Get Directions</button>
+
+                        </form>
+                <div style="margin:10px;">
+                 <img src="{% static q.image_url %}" class="img-responsive" alt="thumbnail" style="height:150px; width:50%;">
+                </div>
+        </div>   </div></div>
+
+    {% endfor %}
+</div>
+<script>
+    $(window).load(function () {
+    $( ".jq" ).each(function() {
+    const starTotal = 5;
+    var number = parseFloat($(this).find('.fstar').text(),10);
+     const starPercentage = (number / starTotal);
+     const starPercentageRounded = `${starPercentage*100}%`;
+$(this).find('.stars-inner').css("width",starPercentageRounded);
+});
+            });
+</script>
+{% endblock %}

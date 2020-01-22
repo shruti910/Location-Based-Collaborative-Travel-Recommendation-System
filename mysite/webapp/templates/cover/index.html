@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<title>Trip Recommender</title>
+{% load static %}
+<link href="{% static 'cover\css\style.css' %}" rel='stylesheet' type='text/css' />
+<link rel="icon" href="{% static 'cover/images/icon.png' %}"/>
+<meta name="keywords" content="Hotel Order Form Responsive" />
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap.min.css' %}"/>
+<!-- //end-smoth-scrolling -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,300italic' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<h1>Location based Collaborative</h1>
+<h1>Travel Recommendation System</h1>
+		<div class="message warning ">
+			<div class="inset agile  text-center" >
+							<div class="sap_tabs w3ls-tabs">
+							<h2 style="color:white;" >Explore awesome destinations,hotels and restaurants !</h2>
+	<div class="text-center"><img class="img-circle img-center" src="{% static 'cover/images/icon.png' %}" style="width:160px;height:160px;"/></div>
+<form action="{% url 'homepage' %}">
+     <input type="submit" value="Explore!" />
+</form>
+								<div></div>
+								<div></div>
+
+
+				</div>					
+		</div>
+
+
+
+		</div>
+<script type="text/javascript" src="{% static 'cover/js/jquery-2.1.4.min.js' %}"></script>
+<script>$(document).ready(function(c) {
+	$('.alert-close').on('click', function(c){
+		$('.message').fadeOut('slow', function(c){
+	  		$('.message').remove();
+		});
+	});	  
+});
+</script>
+<script src="{% static 'cover/js/easyResponsiveTabs.js' %}" type="text/javascript"></script>
+<!-- ResponsiveTabs js -->
+			<script type="text/javascript">
+				$(document).ready(function () {
+					$('#horizontalTab').easyResponsiveTabs({
+						type: 'default', //Types: default, vertical, accordion           
+						width: 'auto', //auto or any width like 600px
+						fit: true   // 100% fit in a container
+					});
+				});
+			</script>
+			<!-- //ResponsiveTabs js -->					
+</body>
+</html>

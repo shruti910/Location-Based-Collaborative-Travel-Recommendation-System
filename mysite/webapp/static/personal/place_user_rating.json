@@ -1,0 +1,69 @@
+[
+
+    {
+        "pid": "9",
+        "place": "Disney world",
+        "star": "5",
+        "user_id": "cQpQvH9VNwtWkDXQEzM-cg"
+    },
+    {
+        "pid": "1",
+        "place": "US Space and Rocket Center",
+        "star": "3.2",
+        "user_id": "shruti_p"
+    },
+    {
+        "pid": "126",
+        "place": "Fenway Park",
+        "star": "3",
+        "user_id": "cQpQvH9VNwtWkDXQEzM-cg"
+    },
+    {
+        "pid": "99",
+        "place": "Cape Cod Beaches",
+        "star": "4.5",
+        "user_id": "cQpQvH9VNwtWkDXQEzM-cg"
+    },
+    {
+        "pid": 96,
+        "place": "Glacier Bay National Park",
+        "star": 4,
+        "user_id": "cQpQvH9VNwtWkDXQEzM-cg"
+    },
+    {
+        "pid": 95,
+        "place": "Robert Trent Jones Golf Trail",
+        "star": 4,
+        "user_id": "cQpQvH9VNwtWkDXQEzM-cg"
+    },
+    {
+        "pid": "6",
+        "place": "Red Rocks Amphitheater",
+        "star": "4.5",
+        "user_id": "cQpQvH9VNwtWkDXQEzM-cg"
+    },
+    {
+        "pid": "19",
+        "place": "Acadia National Park",
+        "star": "2.7",
+        "user_id": "cQpQvH9VNwtWkDXQEzM-cg"
+    },
+    {
+        "pid": "7",
+        "place": "Louis' Lunch",
+        "star": "3",
+        "user_id": "cQpQvH9VNwtWkDXQEzM-cg"
+    },
+    {
+        "pid": "58",
+        "place": "Lake Tahoe",
+        "star": "4.5",
+        "user_id": "K4VVhwEycKrmUzu5jE7ntg"
+    },
+    {
+        "pid": "95",
+        "place": "Robert Trent Jones Golf Trail",
+        "star": "4.5",
+        "user_id": "cQpQvH9VNwtWkDXQEzM-cg"
+    }
+]
