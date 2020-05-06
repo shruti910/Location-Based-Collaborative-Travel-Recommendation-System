@@ -1,0 +1,8 @@
+# Location-Based-Collaborative-Travel-Recommendation-System
+A Location Based, Collaborative Travel Recommendation System”, a smart recommender system for tourists. It is website based recommendation system which has been written in python programming language in Pycharm IDE environment using Django framework. The dataset used in this project is Yelp dataset.
+Through this web application, the system allows user to select a particular place where he want to travel, as well as it also displays popular hotels, destinations and restaurants available in the states of USA. On selecting a particular state, a new web page will be open which will display tourist attractions of that state. Here, user can see the position of that place by clicking on the button “Show on Map”, the user can also give his rating by entering values between 1 to 5 to the place.
+User can search nearby tourist attractions, hotels and restaurants by clicking on the buttons provided on the page. Users just have to indicate their interests by giving their ratings as rating involves many inherent factors in them which will help the system in selecting the more convenient choices for them. The Recommender is capable of modifying the initial information of the user’s preferences by studying the interaction between the user and the system, and offering them more adjusted recommendations.
+Moreover, it provides personalized recommendations of hotels and restaurants according to user’s interests using collaborative user-item based filtering. It also filters restaurants and hotels on the basis of the range of cost (for four persons approximately) selected by the user.
+
+Tools used: PyCharm IDE
+Technologies used: Python, HTML, CSS, Bootstrap, JavaScript, jQuery, Django Framework, Google APIs
